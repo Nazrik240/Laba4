@@ -22,7 +22,7 @@ end;
       begin // Сортировка расстояния
  for i:=1 to N-1 do 
         for j:=1 to N-i do
-            if M[j] < M[j+1] then begin
+            if M[j] > M[j+1] then begin
                 Swap(M[j],M[j+1]);
                Swap(M1[j],M1[j+1])
                 end;      
@@ -36,7 +36,7 @@ end;
                 end;      
        end;
 begin 
-  for i:=1 to N do  writeln('Сотрудник № ',H1[i],' Поедет на такси № ',M1[i]);
+  for i:=1 to N do  writeln('Сотрудник № ',M1[i],' Поедет на такси № ',H1[i]);
     writeln(' ');
 end;
 end.
